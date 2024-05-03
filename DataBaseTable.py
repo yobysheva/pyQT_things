@@ -87,6 +87,12 @@ class MyWidget(QWidget):
         self.delete_button.setStyleSheet(back_colour)
         self.delete_button.clicked.connect(self.delete_dialog)
 
+        self.delete_label2 = QLabel('Удалить запись', self)
+
+        self.delete_button2 = QPushButton('Удалить выбранное')
+        self.delete_button2.setStyleSheet(back_colour)
+        self.delete_button2.clicked.connect(self.delete_dialog)
+
         self.lay = QHBoxLayout()
         self.table = QTableWidget()
         self.table.cellChanged.connect(self.change_table)
@@ -115,6 +121,9 @@ class MyWidget(QWidget):
 
         self.button_layout.addWidget(self.delete_label)
         self.button_layout.addWidget(self.delete_button)
+
+        self.button_layout.addWidget(self.delete_label2)
+        self.button_layout.addWidget(self.delete_button2)
 
         self.button_layout.addStretch()
 
