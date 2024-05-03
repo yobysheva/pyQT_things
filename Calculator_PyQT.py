@@ -1,7 +1,7 @@
 import sys
 from PyQt6 import uic, QtWidgets
 import math
-#commit2
+
 def calculate_expression(expression):
     try:
         result = eval(expression)
